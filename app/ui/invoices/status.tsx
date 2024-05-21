@@ -4,13 +4,14 @@ import clsx from 'clsx';
 export default function InvoiceStatus({ status }: { status: string }) {
   return (
     <span
-      className={clsx(
-        'text-m inline-flex items-center rounded-full px-2 py-1',
-        {
-          'bg-red-600 text-white': status === 'awaiting',
-          'bg-lime-400 text-sky-700': status === 'fulfilled',
-        },
-      )}
+    className={clsx(
+      'text-m inline-flex items-center rounded-full px-2 py-1',
+      {
+        'bg-red-600 text-white': status === 'awaiting',
+        'bg-lime-400 text-sky-700': status === 'fulfilled',
+      },
+    )}
+
     >
       {status === 'awaiting' ? (
         <>
